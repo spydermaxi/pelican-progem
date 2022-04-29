@@ -4,6 +4,7 @@ SITEURL = 'http://127.0.0.1:8000'
 SITESUBTITLE = 'An elegant responsive theme for pelican-progem'
 
 PATH = 'content'
+OUTPUT_PATH = r'../docs'
 
 TIMEZONE = 'Asia/Singapore'
 
