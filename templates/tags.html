@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - Tags{% endblock %}
+
+{% block content %}
+
+<header class="blog-header">
+  <div class="inner">
+    <div class="box blog-box">
+      <h1 class="blog-name">Tags on {{ SITENAME }}</h1>
+    </div>
+  </div>
+</header>
+
+<div id="index" class="container">
+
+  <main class="content" role="main">
+
+    {% for tag, articles in tags|sort %}
+    <article class="post no-image">
+      <div class="inner">
+        <div class="box post-box">
+          <h2 class="post-title"><a href="{{ SITEURL }}/{{ tag.url }}" rel="bookmark" title="Permalink to {{ tag }}">{{ tag }}</a></h2>
+          <div class="post-tags" style="max-width:100%;">
+            {% set i = articles|count %}
+            <span class="post-info-label">&bull; {{ articles|count }} {% if i > 1 %}Articles{% else %}Article{% endif %} &bull; Author(s): </span>
+            {% for article in articles %}
+                {% for author in article.authors %}
+                    <a href="{{ author.url }}">{{ author}}</a>
+                {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </main>
+
+</div>
+
+    <h1>Tags for {{ SITENAME }}</h1>
+    <ul>
+    {% for tag, articles in tags|sort %}
+        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

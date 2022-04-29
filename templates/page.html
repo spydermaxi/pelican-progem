@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ page.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME }} - {{ page.title|striptags }}{%endblock%}
+
+{% block head %}
+  {{ super() }}
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(page) %}
+    {{ translations.entry_hreflang(page) }}
+  {% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{page.description}}" />
+  {% endif %}
+
+  {% for tag in page.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+
+<div class="progress-container">
+  <span class="progress-bar"></span>
+</div>
+
+<header class="post-header{% if page.feature_image %} has-cover {% endif %}">
+  <div class="inner">
+    <span class="post-info">
+      <span class="post-type">Article</span>
+      {% if page.tags %}
+      <span class="post-count">{{ page.tags[0] }}</span>
+      {% endif %}
+    </span>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <div class="post-meta-avatars">
+          <figure class="post-meta-avatar avatar">
+
+          </figure>
+      </div>
+      <h4 class="post-meta-author">{{ page.author }}</h4>
+      <time datetime="{{ page.locale_date }}">{{ page.locale_date }}</time>
+    </div>
+    {% if page.feature_image %}
+    <div class="post-cover cover">
+      <img class="image-process-large-photo" src="{{ SITEURL }}/{{ page.feature_image }}" alt="{{ page.title }}"/>
+    </div>
+    {% endif %}
+  </div>
+  {% import 'translations.html' as translations with context %}
+    {{ translations.translations_for(page) }}
+</header>
+
+<main class="content" role="main">
+  <article class="post">
+    <div class="inner">
+
+      <section class="post-content">
+        {{ page.content }}
+      </section>
+
+      <section class="post-footer">
+
+        <div class="post-share">
+          <span class="post-info-label">Share</span>
+          <a title="Twitter" aria-label="Twitter" class="twitter" href="https://twitter.com/share?text={{ page.title }}&url={{ page.url }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="icon icon-twitter" aria-hidden="true"></i>
+          </a>
+          <a title="Facebook" aria-label="Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url }}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="icon icon-facebook" aria-hidden="true"></i>
+          </a>
+          <a title="LinkedIn" aria-label="LinkedIn" class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page.url }}/&amp;title={{ page.title }}" onclick="window.open(this.href, 'linkedin-share', 'width=930,height=720');return false;">
+            <i class="icon icon-linkedin" aria-hidden="true"></i>
+          </a>
+          <a title="Email" aria-label="Email" class="email" href="mailto:?subject={{ page.title }}&amp;body={{ page.url }}">
+            <i class="icon icon-mail" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        {% if page.tags %}
+        <aside class="post-tags">
+          <span class="post-info-label">Topic</span>
+          {% for t in page.tags %}
+          <a href="{{ t.url }}">{{ t.name }}</a>
+          {% endfor %}
+        </aside>
+        {% endif %}
+
+      </section>
+
+    </div>
+  </article>
+</main>
+
+{% endblock %}

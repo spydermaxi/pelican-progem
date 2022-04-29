@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - Categories{% endblock %}
+
+{% block content %}
+
+<header class="blog-header">
+  <div class="inner">
+    <div class="box blog-box">
+      <h1 class="blog-name">Categories on {{ SITENAME }}</h1>
+    </div>
+  </div>
+</header>
+
+<div id="index" class="container">
+
+  <main class="content" role="main">
+
+    {% for category, articles in categories|sort %}
+    <article class="post no-image">
+      <div class="inner">
+        <div class="box post-box">
+          <h2 class="post-title"><a href="{{ SITEURL }}/{{ category.url }}" rel="bookmark" title="Permalink to {{ category }}">{{ category }}</a></h2>
+          <div class="post-tags" style="max-width:100%;">
+            {% set i = articles|count %}
+            <span class="post-info-label">&bull; {{ articles|count }} {% if i > 1 %}Articles{% else %}Article{% endif %} &bull;</span>
+            {% for article in articles %}
+                {% for tag in article.tags %}
+                    <a href="{{ tag.url }}">{{ tag.name }}</a>
+                {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </main>
+
+</div>
+{% endblock %}
