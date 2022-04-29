@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+{% block title %}{{ SITENAME }} - {{ category }} category{% endblock %}
+
+{% block content %}
+
+<header class="blog-header">
+  <div class="inner">
+    <div class="box blog-box">
+      <h1 class="blog-name">Articles in the {{ category }} category</h1>
+    </div>
+  </div>
+</header>
+
+<div id="index" class="container">
+
+  <main class="content" role="main">
+
+    {% for article in dates %}
+    <article class="post no-image">
+      <div class="inner">
+        <div class="box post-box">
+          <h2 class="post-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+          <span class="post-meta">
+            By
+            {% for author in article.authors %}
+            <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+            {% endfor %}
+            on
+            <time class="published" datetime="{{ article.locale_date }}"> {{ article.locale_date }} </time>
+          </span>
+          {{ article.summary }}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </main>
+
+</div>
+{% endblock %}
+

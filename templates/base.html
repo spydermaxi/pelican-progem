@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+  <meta name="generator" content="Pelican" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {% if FEED_ALL_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+  {% endif %}
+  {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+  {% endif %}
+  {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_ATOM and category %}
+  <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}" type="application/atom+xml" rel="alternate"
+    title="{{ SITENAME }} Categories Atom Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_RSS and category %}
+  <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}" type="application/rss+xml" rel="alternate"
+    title="{{ SITENAME }} Categories RSS Feed" />
+  {% endif %}
+  {% if TAG_FEED_ATOM and tag %}
+  <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}" type="application/atom+xml" rel="alternate"
+    title="{{ SITENAME }} Tags Atom Feed" />
+  {% endif %}
+  {% if TAG_FEED_RSS and tag %}
+  <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+  {% endif %}
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" />
+  {% endblock head %}
+</head>
+
+<body id="index" class="home-template">
+
+  <div class="nav-header">
+    <nav class="nav-wrapper" aria-label="Main">
+      <ul>
+        <li{% if page_name == 'index' %} class="active" {% endif %}><a href="{{ SITEURL }}"><span>Home</span></a></li>
+        {% for title, link in MENUITEMS %}
+        <li class=""><a href="{{ link }}"><span>{{ title }}</span></a></li>
+        {% endfor %}
+        {% if DISPLAY_PAGES_ON_MENU %}
+        {% for p in pages %}
+        <li{% if p == page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}"><span>{{ p.title }}</span></a></li>
+          {% endfor %}
+          {% endif %}
+          {% if DISPLAY_CATEGORIES_ON_MENU %}
+          {% for cat, null in categories %}
+          <li{% if cat == category %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ cat.url }}"><span>{{ cat }}</span></a></li>
+            {% endfor %}
+            {% endif %}
+      </ul>
+
+      <ul class="nav-meta">
+        {% for name, link in SOCIAL %}
+        <li class="nav-{{ name }}">
+          <a aria-label="{{ name }}" href="{{ link }}" target="_blank">
+            <i class="fab fa-{{ name }}" aria-hidden="true"></i>
+          </a>
+        </li>
+        {% endfor %}
+        <li class="nav-search">
+          <a title="Search">
+            <i class="icon icon-search" aria-hidden="true"></i>
+            <span>Search</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <div class="nav-wrapper-control">
+      <div class="inner">
+        <a class="nav-menu" role="button"><i class="icon icon-menu" aria-hidden="true"></i>Menu</a>
+        <a class="nav-search" style="display: none;" title="Search" role="button"><i class="icon icon-search" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+  </div>
+  <div class="nav-close" role="button" aria-label="Close"></div>
+
+  <section class="page-wrapper">
+
+    {% block content %}
+    {% endblock %}
+
+    <div class="search-wrapper">
+      <div class="search">
+        <form class="search-form">
+          <input class="search-field" type="text" placeholder="Search…">
+          <button class="search-button" type="submit">
+            <i class="icon icon-search" aria-hidden="true"></i>
+          </button>
+        </form>
+        <div class="popular-wrapper">
+          <h4 class="popular-title">Topics</h4>
+          <span class="popular-tags post-tags">
+            {% for tag, articles in tags %}
+            <a href="{{ tag.url }}">{{ tag.name }}: {{ articles|count }}</a>
+            {% endfor %}
+          </span>
+        </div>
+        <div class="search-result"></div>
+      </div>
+      <button class="search-wrapper-close" aria-label="Close"></button>
+    </div>
+
+    <div class="nav-footer">
+      <nav class="nav-wrapper" aria-label="Footer">
+        <span class="nav-copy">{{ SITENAME }} &copy; 2022 <a class="nav-rss" title="RSS" href="{{ SITEURL }}/rss/" target="_blank"><i class="icon icon-rss" aria-hidden="true"></i></a></span>
+        <span class="nav-credits">Proudly powered by <a href="https://getpelican.org">Pelican</a> & <a href="https://www.python.org/">Python</a> . &bull; <a href="https://github.com/spydermaxi/progem">Progem Theme</a> (Original Theme <a href="https://github.com/arulrajnet/attila">Attila</a>)
+          &bull; <a class="menu-item js-theme" href="#" data-system="System theme" data-dark="Dark theme" data-light="Light theme"><span class="theme-icon"></span><span class="theme-text">System theme</span> </a> </span>
+      </nav>
+    </div>
+
+  </section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/ascript.js"></script>
+</body>
+
+</html>
