@@ -1,7 +1,7 @@
 # Progem
 
 An elegant and responsive theme for Pelican Static Site generator.
-<br>See a demo at: [progem.spydermaxi.com](#)
+<br>See a demo at: [https://spydermaxi.github.io/pelican-progem/](https://spydermaxi.github.io/pelican-progem/)
 
 This is a serious adaption from [Attila Ghost Theme](https://github.com/zutrinken/attila).
 <br>See a demo at: [attila.peteramende.de](https://attila.peteramende.de/)
