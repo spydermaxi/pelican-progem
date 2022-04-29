@@ -1,6 +1,6 @@
 AUTHOR = 'Adrian Loo'
 SITENAME = 'Progem'
-SITEURL = 'http://127.0.0.1:8000'
+SITEURL = 'https://spydermaxi.github.io/pelican-progem'
 SITESUBTITLE = 'An elegant responsive theme for pelican-progem'
 
 PATH = 'content'
