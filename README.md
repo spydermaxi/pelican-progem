@@ -147,10 +147,10 @@ Summary: Some simple instructions on how to get started with Progem.
 
 <img src="https://raw.githubusercontent.com/spydermaxi/pelican-progem/main/screenshots/Coverimage_sample.png" />
    
-[//] # (Fork the pelican-themes repo.)
-[//] # (Clone your fork to a local directory.)
-[//] # (Use the "git submodule" command to add your theme repo as a submodule.)
-[//] # (Commit changes to master branch of your fork, then submit a pull request to merge the fork into pelican-themes.)
+[//]: # (Fork the pelican-themes repo.)
+[//]: # (Clone your fork to a local directory.)
+[//]: # (Use the "git submodule" command to add your theme repo as a submodule.)
+[//]: # (Commit changes to master branch of your fork, then submit a pull request to merge the fork into pelican-themes.)
 
 ## ⚖️ Copyright & License
 
