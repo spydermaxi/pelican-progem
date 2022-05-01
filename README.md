@@ -1,7 +1,7 @@
 # Progem - A Pelican Theme
 
 An elegant and responsive theme for Pelican Static Site generator.
-<br>See the demo [here]](https://spydermaxi.github.io/pelican-progem/)
+<br>See the demo [here](https://spydermaxi.github.io/pelican-progem/)
 
 This is a serious adaption from [Attila Ghost Theme](https://github.com/zutrinken/attila).
 <br>See the demo at: [attila.peteramende.de](https://attila.peteramende.de/)
@@ -146,7 +146,7 @@ Summary: Some simple instructions on how to get started with Progem.
 ```
 
 <img src="https://raw.githubusercontent.com/spydermaxi/pelican-progem/main/screenshots/Coverimage_sample.png" />
-   
+
 [//]: # (Fork the pelican-themes repo.)
 [//]: # (Clone your fork to a local directory.)
 [//]: # (Use the "git submodule" command to add your theme repo as a submodule.)
