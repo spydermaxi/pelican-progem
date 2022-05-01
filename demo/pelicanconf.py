@@ -37,6 +37,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 THEME = '../'
 
 STATIC_PATHS = [
+    'images',
     'extra',
 ]
 EXTRA_PATH_METADATA = {
