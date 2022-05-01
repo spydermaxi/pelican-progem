@@ -25,10 +25,10 @@ Progem - A Pelican Theme
 📷 Screenshot
 ^^^^^^^^^^^^^
 
-.. image:: /images/Progem_light.png
+.. image:: {static}/images/Progem_light.png
    :alt: Progem Light theme
 
-.. image:: /images/Progem_dark.png
+.. image:: {static}/images/Progem_dark.png
    :alt: Progem Dark theme
 
 -----
@@ -36,11 +36,11 @@ Progem - A Pelican Theme
 💻 ➡️ 📱 Responsive
 ^^^^^^^^^^^^^^^^^^^^
 
-.. |responsive1| image:: /images/responsive_dark.png
+.. |responsive1| image:: {static}/images/responsive_dark.png
    :alt: Responsive layout
    :width: 200px
 
-.. |responsive2| image:: /images/Responsive_menu.png
+.. |responsive2| image:: {static}/images/Responsive_menu.png
    :alt: Responsive menu
    :width: 200px
 
@@ -215,7 +215,7 @@ Another example in ``.rst`` file::
    :feature_image: images/light_times_square.jpg
    :summary: Some simple instructions on how to get started with Progem.
 
-.. image:: /images/Coverimage_sample.png
+.. image:: {static}/images/Coverimage_sample.png
    :alt: Sample Article Cover Image
 
 -----
@@ -282,10 +282,10 @@ Another example in ``.rst`` file::
 
    When writing contents, insert image using the following codes::
 
-      .. image:: /path/to/image.png
+      .. image:: {static}/path/to/image.png
          :alt: This is an image in content
 
-   The ``:alt:`` declaration is required.
+   The ``:alt:`` declaration and static path ``{static}`` are required.
 
 3. Avoid double underscores
 
