@@ -4,6 +4,9 @@ SITEURL = 'https://spydermaxi.github.io/pelican-progem'
 # SITEURL = 'http://127.0.0.1:8000'
 SITESUBTITLE = 'An elegant responsive theme for pelican-progem'
 
+# Uncomment following line if you want document-relative URLs when developing
+# RELATIVE_URLS = True
+
 PATH = 'content'
 OUTPUT_PATH = r'../docs'
 
@@ -62,5 +65,4 @@ IMAGE_PROCESS = {
     },
 }
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+PYGMENTS_RST_OPTIONS = {'linenos': 'inline'}

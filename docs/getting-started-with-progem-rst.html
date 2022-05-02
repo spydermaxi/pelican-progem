@@ -9,7 +9,8 @@
 <meta content="True" name="HandheldFriendly"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
-<link href="https://spydermaxi.github.io/pelican-progem/theme/css/style.css" rel="stylesheet" type="text/css">
+<link href="https://spydermaxi.github.io/pelican-progem/theme/css/codehilite.css" rel="stylesheet" type="text/css">
+<link href="https://spydermaxi.github.io/pelican-progem/theme/css/style.css" rel="stylesheet" type="text/css"/>
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <meta content="getting started" name="tags"/>
 <meta content="progem" name="tags"/>
@@ -109,11 +110,11 @@
 <div class="section" id="install-progem-theme">
 <h2>📥 Install Progem theme</h2>
 <p>First, choose a location to hold your themes. For this example, we'll use the directory <tt class="docutils literal"><span class="pre">~/pelican-themes/progem</span></tt>, but yours could be different. Clone the pelican-themes repository to that location on your local machine:</p>
-<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">spydermaxi</span><span class="o">/</span><span class="n">pelican</span><span class="o">-</span><span class="n">progem</span> <span class="o">~/</span><span class="n">pelican</span><span class="o">-</span><span class="n">themes</span><span class="o">/</span><span class="n">progem</span>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">spydermaxi</span><span class="o">/</span><span class="n">pelican</span><span class="o">-</span><span class="n">progem</span> <span class="o">~/</span><span class="n">pelican</span><span class="o">-</span><span class="n">themes</span><span class="o">/</span><span class="n">progem</span>
 </pre></div>
 <p>Now you should have <strong>Progem</strong> repository stored at <tt class="docutils literal"><span class="pre">~/pelican-themes/progem</span></tt>.</p>
 <p>To use one of the themes, edit your Pelican settings file (<tt class="docutils literal">pelicanconf.py</tt>) to include this line:</p>
-<div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s2">"/home/user/pelican-themes/progem"</span>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">THEME</span> <span class="o">=</span> <span class="s2">"/home/user/pelican-themes/progem"</span>
 </pre></div>
 </div>
 <hr class="docutils"/>
@@ -123,7 +124,7 @@
 <li><p class="first"><a class="reference external" href="https://github.com/pelican-plugins/neighbors">Neighbor Articles: A Plugin for Pelican</a> - Neighbors is a Pelican plugin that adds Next/Previous links to articles.</p>
 <blockquote>
 <p><strong>Installation</strong> - Simply activate your environment and install via:</p>
-<div class="highlight"><pre><span></span>python -m pip install pelican-neighbors
+<div class="highlight"><pre><span></span><span class="linenos">1</span>python -m pip install pelican-neighbors
 </pre></div>
 <p><strong>Usage</strong> - The theme uses the <tt class="docutils literal">prev_article</tt> and <tt class="docutils literal">next_article</tt> variables to create links in article page in jinja templating. No configuration required from you.</p>
 </blockquote>
@@ -131,26 +132,26 @@
 <li><p class="first"><a class="reference external" href="https://github.com/pelican-plugins/image-process">Image Process: A Plugin for Pelican</a> - Image Process also makes it easy to create responsive images using the HTML5 srcset attribute and &lt;picture&gt; tag. It does this by generating multiple derivative images from one or more sources.</p>
 <blockquote>
 <p><strong>Installation</strong> - Simply activate your environment and install via:</p>
-<div class="highlight"><pre><span></span>python -m pip install pelican-image-process
+<div class="highlight"><pre><span></span><span class="linenos">1</span>python -m pip install pelican-image-process
 </pre></div>
 <p><strong>Usage</strong> - Add the following codes into <tt class="docutils literal">pelicanconf.py</tt> file to enable responsive srcset images</p>
-<div class="highlight"><pre><span></span><span class="n">IMAGE_PROCESS</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"large-photo"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"responsive-image"</span><span class="p">,</span>
-        <span class="s2">"sizes"</span><span class="p">:</span> <span class="p">(</span>
-            <span class="s2">"(min-width: 1200px) 800px, "</span>
-            <span class="s2">"(min-width: 992px) 650px, "</span>
-            <span class="s2">"(min-width: 768px) 718px, "</span>
-            <span class="s2">"100vw"</span>
-        <span class="p">),</span>
-        <span class="s2">"srcset"</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">(</span><span class="s2">"600w"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"scale_in 600 450 True"</span><span class="p">]),</span>
-            <span class="p">(</span><span class="s2">"800w"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"scale_in 800 600 True"</span><span class="p">]),</span>
-            <span class="p">(</span><span class="s2">"1600w"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"scale_in 1600 1200 True"</span><span class="p">]),</span>
-        <span class="p">],</span>
-        <span class="s2">"default"</span><span class="p">:</span> <span class="s2">"800w"</span><span class="p">,</span>
-    <span class="p">},</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">IMAGE_PROCESS</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos"> 2</span>    <span class="s2">"large-photo"</span><span class="p">:</span> <span class="p">{</span>
+<span class="linenos"> 3</span>        <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"responsive-image"</span><span class="p">,</span>
+<span class="linenos"> 4</span>        <span class="s2">"sizes"</span><span class="p">:</span> <span class="p">(</span>
+<span class="linenos"> 5</span>            <span class="s2">"(min-width: 1200px) 800px, "</span>
+<span class="linenos"> 6</span>            <span class="s2">"(min-width: 992px) 650px, "</span>
+<span class="linenos"> 7</span>            <span class="s2">"(min-width: 768px) 718px, "</span>
+<span class="linenos"> 8</span>            <span class="s2">"100vw"</span>
+<span class="linenos"> 9</span>        <span class="p">),</span>
+<span class="linenos">10</span>        <span class="s2">"srcset"</span><span class="p">:</span> <span class="p">[</span>
+<span class="linenos">11</span>            <span class="p">(</span><span class="s2">"600w"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"scale_in 600 450 True"</span><span class="p">]),</span>
+<span class="linenos">12</span>            <span class="p">(</span><span class="s2">"800w"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"scale_in 800 600 True"</span><span class="p">]),</span>
+<span class="linenos">13</span>            <span class="p">(</span><span class="s2">"1600w"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"scale_in 1600 1200 True"</span><span class="p">]),</span>
+<span class="linenos">14</span>        <span class="p">],</span>
+<span class="linenos">15</span>        <span class="s2">"default"</span><span class="p">:</span> <span class="s2">"800w"</span><span class="p">,</span>
+<span class="linenos">16</span>    <span class="p">},</span>
+<span class="linenos">17</span><span class="p">}</span>
 </pre></div>
 </blockquote>
 </li>
@@ -162,20 +163,20 @@
 <p>Add additional variables into <tt class="docutils literal">pelicanconf.py</tt>:</p>
 <ol class="arabic">
 <li><p class="first"><strong>Theme</strong></p>
-<div class="highlight"><pre><span></span><span class="c1"># Example directory of progem</span>
-<span class="n">THEME</span> <span class="o">=</span> <span class="s2">"/home/user/pelican-themes/progem"</span>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Example directory of progem</span>
+<span class="linenos">2</span><span class="n">THEME</span> <span class="o">=</span> <span class="s2">"/home/user/pelican-themes/progem"</span>
 </pre></div>
 </li>
 <li><p class="first"><strong>Site Subtitles</strong></p>
-<div class="highlight"><pre><span></span><span class="n">SITESUBTITLE</span> <span class="o">=</span> <span class="s1">'An elegant responsive theme for pelican-progem'</span>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">SITESUBTITLE</span> <span class="o">=</span> <span class="s1">'An elegant responsive theme for pelican-progem'</span>
 </pre></div>
 </li>
 <li><p class="first"><strong>Social Widgets</strong></p>
-<div class="highlight"><pre><span></span><span class="c1"># Social widget should be in tuple format ('social-name', 'social-website') #</span>
-<span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'github'</span><span class="p">,</span> <span class="s1">'http://github.com/spydermaxi/pelican-progem'</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">'facebook'</span><span class="p">,</span> <span class="s1">'https://facebook.com'</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">'instagram'</span><span class="p">,</span> <span class="s1">'https://instagram.com'</span><span class="p">),</span>
-        <span class="p">(</span><span class="s1">'youtube'</span><span class="p">,</span> <span class="s1">'https://youtube.com'</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Social widget should be in tuple format ('social-name', 'social-website') #</span>
+<span class="linenos">2</span><span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">((</span><span class="s1">'github'</span><span class="p">,</span> <span class="s1">'http://github.com/spydermaxi/pelican-progem'</span><span class="p">),</span>
+<span class="linenos">3</span>        <span class="p">(</span><span class="s1">'facebook'</span><span class="p">,</span> <span class="s1">'https://facebook.com'</span><span class="p">),</span>
+<span class="linenos">4</span>        <span class="p">(</span><span class="s1">'instagram'</span><span class="p">,</span> <span class="s1">'https://instagram.com'</span><span class="p">),</span>
+<span class="linenos">5</span>        <span class="p">(</span><span class="s1">'youtube'</span><span class="p">,</span> <span class="s1">'https://youtube.com'</span><span class="p">))</span>
 </pre></div>
 </li>
 </ol>
@@ -191,14 +192,14 @@
 <li><p class="first">Choose <tt class="docutils literal">Embed</tt> and copy the <tt class="docutils literal">&lt;link&gt;</tt> code.</p>
 </li>
 <li><p class="first">Add this to <tt class="docutils literal">base.html</tt> header:</p>
-<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://fonts.googleapis.com/css2?family=Mukta&amp;display=swap"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://fonts.googleapis.com/css2?family=Crimson+Text&amp;display=swap"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nv">--font-primary</span><span class="p">:</span><span class="w"> </span><span class="s1">'Mukta'</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="nv">--font-secondary</span><span class="p">:</span><span class="w"> </span><span class="s1">'Crimson Text'</span><span class="p">,</span><span class="w"> </span><span class="kc">serif</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://fonts.googleapis.com/css2?family=Mukta&amp;display=swap"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<span class="linenos">2</span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://fonts.googleapis.com/css2?family=Crimson+Text&amp;display=swap"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<span class="linenos">3</span><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">  </span><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">    </span><span class="nv">--font-primary</span><span class="p">:</span><span class="w"> </span><span class="s1">'Mukta'</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">6</span><span class="w">    </span><span class="nv">--font-secondary</span><span class="p">:</span><span class="w"> </span><span class="s1">'Crimson Text'</span><span class="p">,</span><span class="w"> </span><span class="kc">serif</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">8</span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </pre></div>
 </li>
 </ol>
@@ -248,42 +249,42 @@ Getting Started with Progem
 <li><p class="first">Code blocks</p>
 <p>Although Pelican supports both rsT and Markdown formats. Code blocks display better on this Theme in rsT than in Markdown.</p>
 <p>Example content input in <strong>Markdown</strong></p>
-<div class="highlight"><pre><span></span><span class="o">[</span>//<span class="o">]</span>: <span class="c1"># (Markdown Code Block demo)</span>
-<span class="sb">```</span>
-def print_progem<span class="o">()</span>:
-    print<span class="o">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="o">)</span>
-    print<span class="o">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="o">)</span>
-<span class="sb">```</span>
-
-or
-
-<span class="o">[</span>//<span class="o">]</span>: <span class="c1"># (Markdown Code Block demo)</span>
-:::python
-def print_progem<span class="o">()</span>:
-    print<span class="o">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="o">)</span>
-    print<span class="o">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="o">)</span>
+<div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="o">[</span>//<span class="o">]</span>: <span class="c1"># (Markdown Code Block demo)</span>
+<span class="linenos"> 2</span><span class="sb">```</span>
+<span class="linenos"> 3</span>def print_progem<span class="o">()</span>:
+<span class="linenos"> 4</span>    print<span class="o">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="o">)</span>
+<span class="linenos"> 5</span>    print<span class="o">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="o">)</span>
+<span class="linenos"> 6</span><span class="sb">```</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>or
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="o">[</span>//<span class="o">]</span>: <span class="c1"># (Markdown Code Block demo)</span>
+<span class="linenos">11</span>:::python
+<span class="linenos">12</span>def print_progem<span class="o">()</span>:
+<span class="linenos">13</span>    print<span class="o">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="o">)</span>
+<span class="linenos">14</span>    print<span class="o">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="o">)</span>
 </pre></div>
 <p>will produce the following display:</p>
 <p><tt class="docutils literal">def <span class="pre">print_progem():</span></tt></p>
 <p><tt class="docutils literal"><span class="pre">print("Pelican</span> is a statis site generator")</tt></p>
 <p><tt class="docutils literal"><span class="pre">print("Progem</span> is an elegant theme for Pelican")</tt></p>
 <p>Whereas content input in <strong>rsT</strong></p>
-<div class="highlight"><pre><span></span>.. code-block:: python
-   def print_progem<span class="o">()</span>:
-       print<span class="o">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="o">)</span>
-       print<span class="o">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="o">)</span>
-
-or
-
-::
-   def print_progem<span class="o">()</span>:
-       print<span class="o">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="o">)</span>
-       print<span class="o">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="o">)</span>
+<div class="highlight"><pre><span></span><span class="linenos"> 1</span>.. code-block:: python
+<span class="linenos"> 2</span>   def print_progem<span class="o">()</span>:
+<span class="linenos"> 3</span>       print<span class="o">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="o">)</span>
+<span class="linenos"> 4</span>       print<span class="o">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="o">)</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>or
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>::
+<span class="linenos"> 9</span>   def print_progem<span class="o">()</span>:
+<span class="linenos">10</span>       print<span class="o">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="o">)</span>
+<span class="linenos">11</span>       print<span class="o">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="o">)</span>
 </pre></div>
 <p>will produce the following display:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_progem</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">print_progem</span><span class="p">():</span>
+<span class="linenos">2</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Pelican is a statis site generator"</span><span class="p">)</span>
+<span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Progem is an elegant theme for Pelican"</span><span class="p">)</span>
 </pre></div>
 </li>
 <li><p class="first">Content images</p>
@@ -297,11 +298,11 @@ or
 <li><p class="first">Avoid double underscores</p>
 <p>Avoid syntax with double underscores in backquotes. This will cause errors during pelican contetn production</p>
 <p>Input this syntax <tt class="docutils literal">__Content Underscores__</tt>, will generate the following error</p>
-<div class="highlight"><pre><span></span>ERROR    Could not process ./your_rst_file.rst
-/path/to/you_rst_file.rst::
-        <span class="o">(</span>ERROR/3<span class="o">)</span> Anonymouse hyperlink mismatch: <span class="m">1</span>
-        references but <span class="m">0</span> targets.
-        see <span class="s2">"backrefs"</span> attribute <span class="k">for</span> IDs
+<div class="highlight"><pre><span></span><span class="linenos">1</span>ERROR    Could not process ./your_rst_file.rst
+<span class="linenos">2</span>/path/to/you_rst_file.rst::
+<span class="linenos">3</span>        <span class="o">(</span>ERROR/3<span class="o">)</span> Anonymouse hyperlink mismatch: <span class="m">1</span>
+<span class="linenos">4</span>        references but <span class="m">0</span> targets.
+<span class="linenos">5</span>        see <span class="s2">"backrefs"</span> attribute <span class="k">for</span> IDs
 </pre></div>
 </li>
 </ol>
@@ -338,13 +339,23 @@ or
 <!-- Links to Previous/Next posts -->
 <aside class="post-nav">
 <!-- If there is a next post, display using same markup. neighbor plugin required -->
+<a class="post-nav-next" href="codeblock-demo-in-restructuredtext.html">
+<section class="post-nav-teaser">
+<i aria-label="Next post" class="icon icon-arrow-left"></i>
+<h2 class="post-nav-title">Codeblock Demo in reStructuredText</h2>
+<p class="post-nav-excerpt"><p class="first last">This is a demonstration of codeblock syntax highlighting produced from reStructuredText file. Contents are writtent in reStructuredText and published using Progem Theme and Pelican static site generator.</p>
+…</p>
+<p class="post-nav-meta"><time datetime="Mon 02 May 2022">Mon 02 May 2022</time></p>
+</section>
+</a>
 <!-- If there is a previous post, display using same markup. neighbor plugin required -->
 <a class="post-nav-prev" href="welcome-to-progem.html">
 <section class="post-nav-teaser">
 <i aria-label="Previous post" class="icon icon-arrow-right"></i>
 <h2 class="post-nav-title">Welcome to Progem</h2>
-<p class="post-nav-excerpt">…</p>
-<p class="post-nav-meta"><time datetime=""></time></p>
+<p class="post-nav-excerpt"><p class="first last">This is a demonstration of codeblock syntax highlighting produced from reStructuredText file. Contents are writtent in reStructuredText and published using Progem Theme and Pelican static site generator.</p>
+…</p>
+<p class="post-nav-meta"><time datetime="Mon 02 May 2022">Mon 02 May 2022</time></p>
 </section>
 </a>
 <div class="clear"></div>
@@ -363,6 +374,12 @@ or
 <div class="popular-wrapper">
 <h4 class="popular-title">Topics</h4>
 <span class="popular-tags post-tags">
+<a href="tag/codeblocks.html">codeblocks: 2</a>
+<a href="tag/demo.html">demo: 2</a>
+<a href="tag/syntax-highlight.html">syntax highlight: 2</a>
+<a href="tag/codehilite.html">codehilite: 2</a>
+<a href="tag/markdown.html">markdown: 1</a>
+<a href="tag/restructuredtext.html">reStructuredText: 1</a>
 <a href="tag/getting-started.html">getting started: 1</a>
 <a href="tag/progem.html">progem: 2</a>
 <a href="tag/how-to.html">how to: 1</a>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+<title>Progem - Codeblock Demo in reStructuredText</title>
+<meta content="Pelican" name="generator"/>
+<meta content="True" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://spydermaxi.github.io/pelican-progem/theme/css/codehilite.css" rel="stylesheet" type="text/css">
+<link href="https://spydermaxi.github.io/pelican-progem/theme/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="codeblocks" name="tags"/>
+<meta content="demo" name="tags"/>
+<meta content="syntax highlight" name="tags"/>
+<meta content="codehilite" name="tags"/>
+<meta content="reStructuredText" name="tags"/>
+</link></head>
+<body class="home-template" id="index">
+<div class="nav-header">
+<nav aria-label="Main" class="nav-wrapper">
+<ul>
+<li><a href="https://spydermaxi.github.io/pelican-progem"><span>Home</span></a></li>
+<li><a href="https://spydermaxi.github.io/pelican-progem/pages/about.html"><span>About Progem</span></a></li>
+<li><a href="https://spydermaxi.github.io/pelican-progem/pages/contact.html"><span>Contact</span></a></li>
+</ul>
+<ul class="nav-meta">
+<li class="nav-github">
+<a aria-label="github" href="http://github.com/spydermaxi/pelican-progem" target="_blank">
+<i aria-hidden="true" class="fab fa-github"></i>
+</a>
+</li>
+<li class="nav-linkedin">
+<a aria-label="linkedin" href="https://linkedin.com/adrian-loo-spydermaxi" target="_blank">
+<i aria-hidden="true" class="fab fa-linkedin"></i>
+</a>
+</li>
+<li class="nav-search">
+<a title="Search">
+<i aria-hidden="true" class="icon icon-search"></i>
+<span>Search</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="nav-wrapper-control">
+<div class="inner">
+<a class="nav-menu" role="button"><i aria-hidden="true" class="icon icon-menu"></i>Menu</a>
+<a class="nav-search" role="button" style="display: none;" title="Search"><i aria-hidden="true" class="icon icon-search"></i></a>
+</div>
+</div>
+</div>
+<div aria-label="Close" class="nav-close" role="button"></div>
+<section class="page-wrapper">
+<header class="post-header">
+<div class="inner">
+<span class="post-info">
+<span class="post-type">Article</span>
+<span class="post-count">codeblocks</span>
+</span>
+<h1 class="post-title">Codeblock Demo in reStructuredText</h1>
+<div class="post-meta">
+<div class="post-meta-avatars">
+<figure class="post-meta-avatar avatar">
+</figure>
+</div>
+<h4 class="post-meta-author">Progem</h4>
+<time datetime="Mon 02 May 2022">Mon 02 May 2022</time>
+</div>
+</div>
+</header>
+<main class="content" role="main">
+<article class="post">
+<div class="inner">
+<section class="post-content">
+<p>This demo was written in reStructuredText to demonstration after content generatrion using Pelican.</p>
+<div class="section" id="python-syntax-highlighting">
+<h2>Python syntax highlighting</h2>
+<ol class="arabic">
+<li><p class="first">Standard code lines</p>
+<div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># This is a comment</span>
+<span class="linenos"> 2</span><span class="n">this_is_int_var</span> <span class="o">=</span> <span class="mi">123</span>
+<span class="linenos"> 3</span><span class="n">this_is_string_var</span> <span class="o">=</span> <span class="s2">"I'm a string"</span>
+<span class="linenos"> 4</span><span class="n">this_is_boolean_var</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="n">this_is_list</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos"> 7</span>  <span class="s1">'item1'</span><span class="p">,</span>
+<span class="linenos"> 8</span>  <span class="s1">'item2'</span><span class="p">,</span>
+<span class="linenos"> 9</span>  <span class="s1">'item3'</span>
+<span class="linenos">10</span><span class="p">]</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="n">this_is_dictionary</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos">13</span>  <span class="s2">"item1"</span><span class="p">:</span> <span class="s2">"value1"</span><span class="p">,</span>
+<span class="linenos">14</span>  <span class="s2">"item2"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="linenos">15</span>  <span class="s2">"item3"</span><span class="p">:</span> <span class="kc">False</span>
+<span class="linenos">16</span><span class="p">}</span>
+</pre></div>
+</li>
+<li><p class="first">Function code lines</p>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">this_is_a_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">2</span>    <span class="sd">'''</span>
+<span class="linenos">3</span><span class="sd">    This is a docstring</span>
+<span class="linenos">4</span><span class="sd">    '''</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">)</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="linenos">8</span>    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</li>
+<li><p class="first">Class code lines</p>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+<span class="linenos">2</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<span class="linenos">3</span>      <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="linenos">4</span>      <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">"John"</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="linenos">9</span><span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+</pre></div>
+</li>
+</ol>
+</div>
+<div class="section" id="html-syntax-highlighting">
+<h2>HTML syntax highlighting</h2>
+<div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="linenos"> 2</span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="linenos"> 3</span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 4</span><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Page Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="linenos"> 5</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="linenos"> 6</span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This is a Heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="linenos"> 9</span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="linenos">12</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="css-syntax-highlighting">
+<h2>CSS syntax highlighting</h2>
+<div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">  </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">verdana</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="section" id="bash-syntax-highlight">
+<h2>BASH syntax highlight</h2>
+<div class="highlight"><pre><span></span><span class="linenos">1</span>git commit <span class="o">&amp;&amp;</span> git push
+<span class="linenos">2</span>git commit <span class="o">||</span> <span class="nb">echo</span> <span class="s2">"Commit failed"</span>
+</pre></div>
+<p>Another sample</p>
+<div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nv">NAME</span><span class="o">=</span><span class="s2">"John"</span>
+<span class="linenos">2</span><span class="nb">echo</span> <span class="s2">"Hi </span><span class="nv">$NAME</span><span class="s2">"</span>  <span class="c1">#=&gt; Hi John</span>
+<span class="linenos">3</span><span class="nb">echo</span> <span class="s1">'Hi $NAME'</span>  <span class="c1">#=&gt; Hi $NAME</span>
+</pre></div>
+</div>
+</section>
+<section class="post-footer">
+<div class="post-share">
+<span class="post-info-label">Share</span>
+<a aria-label="Twitter" class="twitter" href="https://twitter.com/share?text=Codeblock Demo in reStructuredText&amp;url=codeblock-demo-in-restructuredtext.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Twitter">
+<i aria-hidden="true" class="icon icon-twitter"></i>
+</a>
+<a aria-label="Facebook" class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=codeblock-demo-in-restructuredtext.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Facebook">
+<i aria-hidden="true" class="icon icon-facebook"></i>
+</a>
+<a aria-label="LinkedIn" class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=codeblock-demo-in-restructuredtext.html/&amp;title=Codeblock Demo in reStructuredText" onclick="window.open(this.href, 'linkedin-share', 'width=930,height=720');return false;" title="LinkedIn">
+<i aria-hidden="true" class="icon icon-linkedin"></i>
+</a>
+<a aria-label="Email" class="email" href="mailto:?subject=Codeblock Demo in reStructuredText&amp;body=codeblock-demo-in-restructuredtext.html" title="Email">
+<i aria-hidden="true" class="icon icon-mail"></i>
+</a>
+</div>
+<aside class="post-tags">
+<span class="post-info-label">Topic</span>
+<a href="tag/codeblocks.html">codeblocks</a>
+<a href="tag/demo.html">demo</a>
+<a href="tag/syntax-highlight.html">syntax highlight</a>
+<a href="tag/codehilite.html">codehilite</a>
+<a href="tag/restructuredtext.html">reStructuredText</a>
+</aside>
+</section>
+<!-- Links to Previous/Next posts -->
+<aside class="post-nav">
+<!-- If there is a next post, display using same markup. neighbor plugin required -->
+<a class="post-nav-next" href="codeblock-demo-in-markdown.html">
+<section class="post-nav-teaser">
+<i aria-label="Next post" class="icon icon-arrow-left"></i>
+<h2 class="post-nav-title">Codeblock Demo in Markdown</h2>
+<p class="post-nav-excerpt"><p>This is a demonstration of codeblock syntax highlighting produced from Markdown file. Contents are writtent in markdown and published using Progem Theme and Pelican static site generator.</p>…</p>
+<p class="post-nav-meta"><time datetime="Mon 02 May 2022">Mon 02 May 2022</time></p>
+</section>
+</a>
+<!-- If there is a previous post, display using same markup. neighbor plugin required -->
+<a class="post-nav-prev" href="getting-started-with-progem-rst.html">
+<section class="post-nav-teaser">
+<i aria-label="Previous post" class="icon icon-arrow-right"></i>
+<h2 class="post-nav-title">Getting Started with Progem</h2>
+<p class="post-nav-excerpt"><p>This is a demonstration of codeblock syntax highlighting produced from Markdown file. Contents are writtent in markdown and published using Progem Theme and Pelican static site generator.</p>…</p>
+<p class="post-nav-meta"><time datetime="Mon 02 May 2022">Mon 02 May 2022</time></p>
+</section>
+</a>
+<div class="clear"></div>
+</aside>
+</div>
+</article>
+</main>
+<div class="search-wrapper">
+<div class="search">
+<form class="search-form">
+<input class="search-field" placeholder="Search…" type="text"/>
+<button class="search-button" type="submit">
+<i aria-hidden="true" class="icon icon-search"></i>
+</button>
+</form>
+<div class="popular-wrapper">
+<h4 class="popular-title">Topics</h4>
+<span class="popular-tags post-tags">
+<a href="tag/codeblocks.html">codeblocks: 2</a>
+<a href="tag/demo.html">demo: 2</a>
+<a href="tag/syntax-highlight.html">syntax highlight: 2</a>
+<a href="tag/codehilite.html">codehilite: 2</a>
+<a href="tag/markdown.html">markdown: 1</a>
+<a href="tag/restructuredtext.html">reStructuredText: 1</a>
+<a href="tag/getting-started.html">getting started: 1</a>
+<a href="tag/progem.html">progem: 2</a>
+<a href="tag/how-to.html">how to: 1</a>
+<a href="tag/welcome.html">welcome: 1</a>
+<a href="tag/intro.html">intro: 1</a>
+<a href="tag/introduction.html">introduction: 1</a>
+<a href="tag/about.html">about: 1</a>
+</span>
+</div>
+<div class="search-result"></div>
+</div>
+<button aria-label="Close" class="search-wrapper-close"></button>
+</div>
+<div class="nav-footer">
+<nav aria-label="Footer" class="nav-wrapper">
+<span class="nav-copy">Progem © 2022 <a class="nav-rss" href="https://spydermaxi.github.io/pelican-progem/rss/" target="_blank" title="RSS"><i aria-hidden="true" class="icon icon-rss"></i></a></span>
+<span class="nav-credits">Proudly powered by <a href="https://getpelican.org">Pelican</a> &amp; <a href="https://www.python.org/">Python</a> . • <a href="https://github.com/spydermaxi/pelican-progem">Progem Theme</a> (Original Theme <a href="https://github.com/arulrajnet/attila">Attila</a>)
+          • <a class="menu-item js-theme" data-dark="Dark theme" data-light="Light theme" data-system="System theme" href="#"><span class="theme-icon"></span><span class="theme-text">System theme</span> </a> </span>
+</nav>
+</div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://spydermaxi.github.io/pelican-progem/theme/js/ascript.js" type="text/javascript"></script>
+</body>
+</html>
