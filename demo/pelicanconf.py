@@ -65,4 +65,4 @@ IMAGE_PROCESS = {
     },
 }
 
-PYGMENTS_RST_OPTIONS = {'linenos': 'inline'}
+# PYGMENTS_RST_OPTIONS = {'linenos': 'inline'}
