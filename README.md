@@ -151,6 +151,14 @@ Summary: Some simple instructions on how to get started with Progem.
 [//]: # (Clone your fork to a local directory.)
 [//]: # (Use the "git submodule" command to add your theme repo as a submodule.)
 [//]: # (Commit changes to master branch of your fork, then submit a pull request to merge the fork into pelican-themes.)
+   
+## Stargazers
+
+[![Stargazers repo roster for @spydermaxi/pelican-progem](https://reporoster.com/stars/spydermaxi/pelican-progem)](https://github.com/spydermaxi/pelican-progem/stargazers)
+   
+## Forkers
+   
+[![Forkers repo roster for @spydermaxi/pelican-progem](https://reporoster.com/forks/spydermaxi/pelican-progem)](https://github.com/spydermaxi/pelican-progem/network/members)
 
 ## ⚖️ Copyright & License
 
