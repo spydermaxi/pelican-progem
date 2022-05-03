@@ -82,18 +82,20 @@
 <h2>A few things you should know</h2>
 <ol>
 <li>
-<p>Progem is a serious adaption of <a href="https://github.com/zutrinken/attila">Attila Theme</a> by <a href="https://peteramende.de/">Peter Amende</a></p>
+<p>Progem is a serious adaptation of <a href="https://github.com/zutrinken/attila">Attila Theme</a> by <a href="https://peteramende.de/">Peter Amende</a></p>
 </li>
 <li>
 <p>Progem is designed to quickly get a static site up and running and allow individuals to showcase their work using Pelican static site generator.</p>
 </li>
 <li>
-<p>The entire platform can be modified and customised to suit your needs. It's very powerful, but does require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.</p>
+<p>The entire platform can be modified and customised to suit your needs. It's very powerful, but does require some knowledge of code.</p>
 </li>
 </ol>
 <h2>History of Pelican</h2>
-<p>A report the original author (Alexis Métaireau) wrote right after writing Pelican, in December 2010.</p>
-<p>Pelican is a simple static blog generator. It parses markup files (Markdown or reStructuredText for now) and generates an HTML folder with all the files in it. I’ve chosen to use Python to implement Pelican because it seemed to be simple and to fit to my needs. I did not wanted to define a class for each thing, but still wanted to keep my things loosely coupled. It turns out that it was exactly what I wanted. From time to time, thanks to the feedback of some users, it took me a very few time to provide fixes on it. So far, I’ve re-factored the Pelican code by two times; each time took less than 30 minutes.</p>
+<p>A report the original author (Alexis Métaireau) wrote right after writing Pelican, in December 2010. Read more about it <a href="https://docs.getpelican.com/en/latest/report.html">here</a></p>
+<h2>Why I created Progem</h2>
+<p>As I was planning <a href="https://spydermaxi.com">Spydermaxi.com</a>, I came across Pelican static site generator and absolutely ❤️ it! Upon reading the documentation, I decided that creating a theme for the site would be an excellent opportunity to learn more about Pelican.</p>
+<p>I'm not a web designer, and having attended Web development Bootcamp, and Django Bootcamp on Udemy has helped me grasp the basics of web development and web design. While researching where to start, I came across <a href="https://github.com/zutrinken/attila">Attila Theme</a>, and decided to adopt the theme to speed up the development process.</p>
 <h2>Next up - Getting Started</h2>
 <p>This will help you quickly implement Progem.</p>
 </section>
@@ -125,16 +127,16 @@
 <!-- Links to Previous/Next posts -->
 <aside class="post-nav">
 <!-- If there is a next post, display using same markup. neighbor plugin required -->
-<a class="post-nav-next" href="getting-started-with-progem-rst.html">
+<!-- If there is a previous post, display using same markup. neighbor plugin required -->
+<a class="post-nav-prev" href="getting-started-with-progem-rst.html">
 <section class="post-nav-teaser">
-<i aria-label="Next post" class="icon icon-arrow-left"></i>
+<i aria-label="Previous post" class="icon icon-arrow-right"></i>
 <h2 class="post-nav-title">Getting Started with Progem</h2>
-<p class="post-nav-excerpt"><p class="first last">Some simple instructions on how to get started with Progem.</p>
-…</p>
+<!-- <p class="post-nav-excerpt"><p class="first last">Some simple instructions on how to get started with Progem.</p>
+</p> -->
 <p class="post-nav-meta"><time datetime="Sun 01 May 2022">Sun 01 May 2022</time></p>
 </section>
 </a>
-<!-- If there is a previous post, display using same markup. neighbor plugin required -->
 <div class="clear"></div>
 </aside>
 </div>
@@ -151,19 +153,19 @@
 <div class="popular-wrapper">
 <h4 class="popular-title">Topics</h4>
 <span class="popular-tags post-tags">
+<a href="tag/welcome.html">welcome: 1</a>
+<a href="tag/progem.html">progem: 2</a>
+<a href="tag/intro.html">intro: 1</a>
+<a href="tag/introduction.html">introduction: 1</a>
+<a href="tag/about.html">about: 1</a>
+<a href="tag/getting-started.html">getting started: 1</a>
+<a href="tag/how-to.html">how to: 1</a>
 <a href="tag/codeblocks.html">codeblocks: 2</a>
 <a href="tag/demo.html">demo: 2</a>
 <a href="tag/syntax-highlight.html">syntax highlight: 2</a>
 <a href="tag/codehilite.html">codehilite: 2</a>
 <a href="tag/markdown.html">markdown: 1</a>
 <a href="tag/restructuredtext.html">reStructuredText: 1</a>
-<a href="tag/getting-started.html">getting started: 1</a>
-<a href="tag/progem.html">progem: 2</a>
-<a href="tag/how-to.html">how to: 1</a>
-<a href="tag/welcome.html">welcome: 1</a>
-<a href="tag/intro.html">intro: 1</a>
-<a href="tag/introduction.html">introduction: 1</a>
-<a href="tag/about.html">about: 1</a>
 </span>
 </div>
 <div class="search-result"></div>
@@ -173,8 +175,7 @@
 <div class="nav-footer">
 <nav aria-label="Footer" class="nav-wrapper">
 <span class="nav-copy">Progem © 2022 <a class="nav-rss" href="https://spydermaxi.github.io/pelican-progem/rss/" target="_blank" title="RSS"><i aria-hidden="true" class="icon icon-rss"></i></a></span>
-<span class="nav-credits">Proudly powered by <a href="https://getpelican.org">Pelican</a> &amp; <a href="https://www.python.org/">Python</a> . • <a href="https://github.com/spydermaxi/pelican-progem">Progem Theme</a> (Original Theme <a href="https://github.com/arulrajnet/attila">Attila</a>)
-          • <a class="menu-item js-theme" data-dark="Dark theme" data-light="Light theme" data-system="System theme" href="#"><span class="theme-icon"></span><span class="theme-text">System theme</span> </a> </span>
+<span class="nav-credits">• Proudly powered by <a href="https://getpelican.com">Pelican</a> &amp; <a href="https://www.python.org/">Python</a> • <a href="https://github.com/spydermaxi/pelican-progem">Progem Theme</a> • <a class="menu-item js-theme" data-dark="Dark theme" data-light="Light theme" data-system="System theme" href="#"><span class="theme-icon"></span><span class="theme-text">System theme</span> </a> </span>
 </nav>
 </div>
 </section>

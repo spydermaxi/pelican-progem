@@ -4,23 +4,27 @@ Tags: welcome, progem, intro, introduction, about
 Slug: welcome-to-progem
 Authors: Progem
 Feature_Image: images/anchorvale_hockey.jpg
-Summary: Welcome to Progem, a Pelican Theme
+Summary: Welcome to Progem, an elegant and responsive theme made for Pelican static site generator
 
 Photo by [Adrian Loo](https://github.com/spydermaxi)
 
 ## A few things you should know
 
-1. Progem is a serious adaption of [Attila Theme](https://github.com/zutrinken/attila) by [Peter Amende](https://peteramende.de/)
+1. Progem is a serious adaptation of [Attila Theme](https://github.com/zutrinken/attila) by [Peter Amende](https://peteramende.de/)
 
 2. Progem is designed to quickly get a static site up and running and allow individuals to showcase their work using Pelican static site generator.
 
-3. The entire platform can be modified and customised to suit your needs. It's very powerful, but does require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.
+3. The entire platform can be modified and customised to suit your needs. It's very powerful, but does require some knowledge of code.
 
 ## History of Pelican
 
-A report the original author (Alexis Métaireau) wrote right after writing Pelican, in December 2010.
+A report the original author (Alexis Métaireau) wrote right after writing Pelican, in December 2010. Read more about it [here](https://docs.getpelican.com/en/latest/report.html)
 
-Pelican is a simple static blog generator. It parses markup files (Markdown or reStructuredText for now) and generates an HTML folder with all the files in it. I’ve chosen to use Python to implement Pelican because it seemed to be simple and to fit to my needs. I did not wanted to define a class for each thing, but still wanted to keep my things loosely coupled. It turns out that it was exactly what I wanted. From time to time, thanks to the feedback of some users, it took me a very few time to provide fixes on it. So far, I’ve re-factored the Pelican code by two times; each time took less than 30 minutes.
+## Why I created Progem
+
+As I was planning [Spydermaxi.com](https://spydermaxi.com), I came across Pelican static site generator and absolutely ❤️ it! Upon reading the documentation, I decided that creating a theme for the site would be an excellent opportunity to learn more about Pelican.
+
+I'm not a web designer, and having attended Web development Bootcamp, and Django Bootcamp on Udemy has helped me grasp the basics of web development and web design. While researching where to start, I came across [Attila Theme](https://github.com/zutrinken/attila), and decided to adopt the theme to speed up the development process.
 
 ## Next up - Getting Started
 

@@ -2,7 +2,7 @@ AUTHOR = 'Adrian Loo'
 SITENAME = 'Progem'
 SITEURL = 'https://spydermaxi.github.io/pelican-progem'
 # SITEURL = 'http://127.0.0.1:8000'
-SITESUBTITLE = 'An elegant responsive theme for pelican-progem'
+SITESUBTITLE = 'An elegant responsive theme for Pelican static site generator'
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
@@ -11,6 +11,9 @@ PATH = 'content'
 OUTPUT_PATH = r'../docs'
 
 TIMEZONE = 'Asia/Singapore'
+
+# to keep introductions at the top
+ARTICLE_ORDER_BY = 'date'
 
 DEFAULT_LANG = 'en'
 
